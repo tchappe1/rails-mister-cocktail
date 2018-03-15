@@ -1,0 +1,16 @@
+<div id="container">
+  <div class="content">
+
+    <h1>Cocktail list</h1>
+    <p>Find me in app/views/cocktails/index.html.erb</p>
+    <% @cocktails.each do |cocktail| %>
+      <div class="cocktail">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </div>
+    <% end %>
+
+  </div>
+
+  <%= link_to "Create new cocktail", new_cocktail_path , class: "button"%>
+
+</div>
