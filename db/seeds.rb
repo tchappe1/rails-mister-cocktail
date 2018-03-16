@@ -14,12 +14,12 @@ Cocktail.create(name: "morjito")
 Cocktail.create(name: "blue lagon")
 Cocktail.create(name: "apple juice")
 
-Dose.create(description: "20dl", cocktail_id: 1, ingredient_id: 2)
-Dose.create(description: "20dl", cocktail_id: 1, ingredient_id: 3)
-Dose.create(description: "20dl", cocktail_id: 2, ingredient_id: 1)
-Dose.create(description: "20dl", cocktail_id: 2, ingredient_id: 2)
-Dose.create(description: "20dl", cocktail_id: 2, ingredient_id: 3)
-Dose.create(description: "20dl", cocktail_id: 3, ingredient_id: 3)
+Dose.create(description: "20dl", cocktail: Cocktail.all.sample, ingredient: Ingredient.all.sample)
+Dose.create(description: "20dl", cocktail: Cocktail.all.sample, ingredient: Ingredient.all.sample)
+Dose.create(description: "20dl", cocktail: Cocktail.all.sample, ingredient: Ingredient.all.sample)
+Dose.create(description: "20dl", cocktail: Cocktail.all.sample, ingredient: Ingredient.all.sample)
+Dose.create(description: "20dl", cocktail: Cocktail.all.sample, ingredient: Ingredient.all.sample)
+Dose.create(description: "20dl", cocktail: Cocktail.all.sample, ingredient: Ingredient.all.sample)
 
 
 
