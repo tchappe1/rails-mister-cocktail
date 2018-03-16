@@ -1,16 +1,23 @@
 <div id="container">
 <div class="content">
 
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
-<%= @cocktail.name %>
+<h1><%= @cocktail.name %></h1>
+
+<%= link_to "Modify", edit_cocktail_path %>
 <br>
 <% @cocktail.doses.each do |dose| %>
 <%= dose.ingredient.name %>
+-
 <%= dose.description %>
+<br>
 <% end %>
 <br>
 <%= link_to "Go back to cocktail list", cocktails_path %>
 
 </div>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.submit "add a dose", class: "btn btn-primary" %>
+<% end %>
 </div>
